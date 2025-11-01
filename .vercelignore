@@ -1,0 +1,8 @@
+# Exclude backend server from Vercel deployment
+server/
+server.js
+
+# Exclude development files
+*.md
+!.vercel/README.md
+
