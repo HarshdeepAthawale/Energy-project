@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import Card from '@/components/ui/Card'
 import { Target, Eye, Clock, TrendingUp } from 'lucide-react'

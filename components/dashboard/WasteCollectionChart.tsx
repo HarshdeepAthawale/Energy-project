@@ -4,15 +4,15 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import Card from '../ui/Card'
 
 interface WasteCollectionChartProps {
-  data: Array<{ date: string; amount: number }>
+  data: Array<{ date?: string; month?: string; amount: number }>
   period: 'weekly' | 'monthly'
 }
 
 export default function WasteCollectionChart({ data, period }: WasteCollectionChartProps) {
   const chartData = data.map((item) => ({
     date: period === 'weekly' 
-      ? new Date(item.date).toLocaleDateString('en-US', { weekday: 'short' })
-      : item.date,
+      ? (item.date ? new Date(item.date).toLocaleDateString('en-US', { weekday: 'short' }) : '')
+      : (item.month || item.date || ''),
     'Waste (kg)': item.amount,
   }))
 
