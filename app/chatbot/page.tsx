@@ -91,7 +91,7 @@ export default function ChatbotPage() {
   }
 
   return (
-    <div className="py-16 bg-gray-50 dark:bg-gray-900 min-h-[calc(100vh-4rem)]">
+    <div className="py-16 bg-gray-50 dark:bg-black min-h-[calc(100vh-4rem)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function ChatbotPage() {
 
         <Card className="p-0 overflow-hidden flex flex-col" style={{ height: '600px' }}>
           {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50 dark:bg-gray-800">
+          <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50 dark:bg-black">
             {messages.map((message, index) => (
               <motion.div
                 key={index}
@@ -117,15 +117,15 @@ export default function ChatbotPage() {
                 className={`flex items-start space-x-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 {message.role === 'bot' && (
-                  <div className="bg-primary-green/20 p-2 rounded-full">
-                    <Bot className="w-5 h-5 text-primary-green" />
+                  <div className="bg-primary-blue/20 p-2 rounded-full">
+                    <Bot className="w-5 h-5 text-primary-blue" />
                   </div>
                 )}
                 <div
                   className={`max-w-[80%] rounded-xl p-4 ${
                     message.role === 'user'
-                      ? 'bg-primary-green text-white'
-                      : 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white'
+                      ? 'bg-primary-blue text-white'
+                      : 'bg-white dark:bg-gray-950 text-gray-900 dark:text-white border dark:border-gray-900'
                   }`}
                 >
                   <p>{message.content}</p>
@@ -141,7 +141,7 @@ export default function ChatbotPage() {
           </div>
 
           {/* Quick Actions */}
-          <div className="border-t border-gray-200 dark:border-gray-700 p-4 bg-white dark:bg-gray-800">
+          <div className="border-t border-gray-200 dark:border-gray-950 p-4 bg-white dark:bg-black">
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="text-sm text-gray-600 dark:text-gray-400 mr-2">Quick questions:</span>
               {['How to schedule pickup?', 'What are eco-tokens?', 'How to segregate waste?'].map(
@@ -149,7 +149,7 @@ export default function ChatbotPage() {
                   <button
                     key={query}
                     onClick={() => handleQuickAction(query)}
-                    className="px-3 py-1 text-xs bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full text-gray-700 dark:text-gray-300 transition-colors"
+                    className="px-3 py-1 text-xs bg-gray-100 dark:bg-gray-950 hover:bg-gray-200 dark:hover:bg-gray-900 rounded-full text-gray-700 dark:text-gray-300 transition-colors border dark:border-gray-900"
                   >
                     {query}
                   </button>
@@ -164,7 +164,7 @@ export default function ChatbotPage() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your message..."
-                className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
               />
               <Button type="submit" variant="primary" className="flex items-center space-x-2">
                 <Send className="w-5 h-5" />

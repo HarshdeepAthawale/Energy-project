@@ -38,7 +38,7 @@ export default function DashboardPage() {
     return (
       <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-green mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-black dark:border-white mx-auto"></div>
           <p className="mt-4 text-gray-600 dark:text-gray-400">Loading...</p>
         </div>
       </div>
@@ -56,13 +56,13 @@ export default function DashboardPage() {
       icon: Recycle,
       label: 'Total Pickups',
       value: userPickups.length.toString(),
-      color: 'text-primary-green',
+      color: 'text-black dark:text-white',
     },
     {
       icon: TrendingUp,
       label: 'Your CO₂ Saved',
       value: `${Math.round(mockStats.co2Saved * 0.1).toLocaleString()} kg`,
-      color: 'text-primary-blue',
+      color: 'text-black dark:text-white',
     },
     {
       icon: Award,
@@ -79,7 +79,7 @@ export default function DashboardPage() {
   ]
 
   return (
-    <div className="py-8 bg-gray-50 dark:bg-gray-900 min-h-[calc(100vh-4rem)]">
+    <div className="py-8 bg-gray-50 dark:bg-black min-h-[calc(100vh-4rem)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -91,7 +91,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Tabs */}
-        <div className="mb-8 border-b border-gray-200 dark:border-gray-700">
+          <div className="mb-8 border-b border-gray-200 dark:border-gray-950">
           <nav className="flex space-x-8">
             {[
               { id: 'overview', label: 'Overview' },
@@ -104,7 +104,7 @@ export default function DashboardPage() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                   activeTab === tab.id
-                    ? 'border-primary-green text-primary-green'
+                    ? 'border-primary-blue text-primary-blue'
                     : 'border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
                 }`}
               >
@@ -135,7 +135,7 @@ export default function DashboardPage() {
 
             <div className="grid lg:grid-cols-2 gap-6">
               <SegregationAccuracyChart accuracy={mockStats.segregationAccuracy} />
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+              <div className="bg-white dark:bg-black rounded-xl shadow-md dark:shadow-gray-950 p-6 border dark:border-gray-950">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   Quick Actions
                 </h3>
@@ -198,7 +198,7 @@ export default function DashboardPage() {
 
         {activeTab === 'reports' && (
           <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+            <div className="bg-white dark:bg-black rounded-xl shadow-md dark:shadow-gray-950 p-6 border dark:border-gray-950">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Impact Reports
               </h2>
@@ -206,7 +206,7 @@ export default function DashboardPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <p className="text-gray-600 dark:text-gray-400 mb-2">Total Waste Collected</p>
-                    <p className="text-3xl font-bold text-primary-green">
+                    <p className="text-3xl font-bold text-primary-blue">
                       {mockStats.totalWasteCollected.toLocaleString()} kg
                     </p>
                   </div>

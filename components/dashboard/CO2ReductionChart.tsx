@@ -20,7 +20,7 @@ export default function CO2ReductionChart({ co2Saved, totalWaste }: CO2Reduction
         Environmental Impact
       </h3>
       <div className="mb-4">
-        <div className="text-3xl font-bold text-primary-green mb-2">
+        <div className="text-3xl font-bold text-primary-blue mb-2">
           {co2Saved.toLocaleString()} kg
         </div>
         <div className="text-gray-600 dark:text-gray-400">

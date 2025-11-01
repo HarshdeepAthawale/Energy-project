@@ -12,13 +12,9 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          green: '#00b894',
-          blue: '#0984e3',
           gray: '#dfe6e9',
         },
         eco: {
-          green: '#00b894',
-          blue: '#0984e3',
           light: '#dfe6e9',
           dark: '#2d3436',
         },

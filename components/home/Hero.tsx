@@ -7,8 +7,7 @@ import Button from '../ui/Button'
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-primary-green via-green-500 to-primary-blue text-white py-20 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-black/10"></div>
+    <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,12 +21,12 @@ export default function Hero() {
             transition={{ delay: 0.2, type: 'spring' }}
             className="inline-flex items-center justify-center mb-6"
           >
-            <Globe className="w-16 h-16" />
+            <Globe className="w-16 h-16 text-gray-900 dark:text-white" />
           </motion.div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance text-gray-900 dark:text-white">
             Smart Waste, Clean Future
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto text-balance">
+          <p className="text-xl md:text-2xl mb-8 text-gray-700 dark:text-gray-300 max-w-3xl mx-auto text-balance">
             Transforming waste management through IoT integration, AI-powered sorting,
             and community rewards for a sustainable tomorrow.
           </p>
@@ -39,7 +38,7 @@ export default function Hero() {
               </Button>
             </Link>
             <Link href="/learn">
-              <Button variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary-green">
+              <Button variant="outline" className="border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-black">
                 Join the Movement
               </Button>
             </Link>

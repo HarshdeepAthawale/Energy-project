@@ -38,18 +38,18 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gray-50 dark:bg-black py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <Recycle className="w-12 h-12 text-primary-green" />
+            <Recycle className="w-12 h-12 text-primary-blue" />
           </div>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
             Create your account
           </h2>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             Already have an account?{' '}
-            <Link href="/login" className="text-primary-green hover:text-green-600">
+            <Link href="/login" className="text-primary-blue hover:text-blue-600">
               Sign in
             </Link>
           </p>
@@ -72,7 +72,7 @@ export default function RegisterPage() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
                 placeholder="John Doe"
               />
             </div>
@@ -88,7 +88,7 @@ export default function RegisterPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
                 placeholder="john@example.com"
               />
             </div>
@@ -104,7 +104,7 @@ export default function RegisterPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
                 placeholder="Create a password"
               />
             </div>
@@ -117,7 +117,7 @@ export default function RegisterPage() {
                 name="role"
                 value={role}
                 onChange={(e) => setRole(e.target.value as 'resident' | 'business')}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
               >
                 <option value="resident">Resident</option>
                 <option value="business">Business Owner</option>

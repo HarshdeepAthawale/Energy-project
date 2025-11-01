@@ -10,12 +10,12 @@ export default function BinStatusCard({ bin }: BinStatusCardProps) {
   const getStatusColor = () => {
     if (bin.fillLevel >= 90) return 'text-red-500'
     if (bin.fillLevel >= 70) return 'text-yellow-500'
-    return 'text-green-500'
+    return 'text-blue-500'
   }
 
   const getStatusIcon = () => {
     if (bin.status === 'full') return <AlertCircle className="w-5 h-5 text-red-500" />
-    return <CheckCircle className="w-5 h-5 text-green-500" />
+    return <CheckCircle className="w-5 h-5 text-blue-500" />
   }
 
   return (
@@ -42,14 +42,14 @@ export default function BinStatusCard({ bin }: BinStatusCardProps) {
             {bin.fillLevel}%
           </span>
         </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+        <div className="w-full bg-gray-200 dark:bg-gray-950 rounded-full h-3 border dark:border-gray-900">
           <div
             className={`h-3 rounded-full transition-all ${
               bin.fillLevel >= 90
                 ? 'bg-red-500'
                 : bin.fillLevel >= 70
                 ? 'bg-yellow-500'
-                : 'bg-green-500'
+                : 'bg-blue-500'
             }`}
             style={{ width: `${bin.fillLevel}%` }}
           />
@@ -68,7 +68,7 @@ export default function BinStatusCard({ bin }: BinStatusCardProps) {
         </span>
       </div>
 
-      <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700 text-xs text-gray-500 dark:text-gray-400">
+      <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-950 text-xs text-gray-500 dark:text-gray-400">
         Last updated: {new Date(bin.lastUpdated).toLocaleTimeString()}
       </div>
     </Card>

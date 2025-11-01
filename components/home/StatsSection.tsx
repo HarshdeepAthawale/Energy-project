@@ -11,7 +11,7 @@ export default function StatsSection() {
       icon: Recycle,
       label: 'Total Pickups',
       value: mockStats.totalPickups.toLocaleString(),
-      color: 'text-primary-green',
+      color: 'text-primary-blue',
     },
     {
       icon: TrendingUp,
@@ -23,7 +23,7 @@ export default function StatsSection() {
       icon: Award,
       label: 'Segregation Accuracy',
       value: `${mockStats.segregationAccuracy}%`,
-      color: 'text-green-600',
+      color: 'text-blue-600',
     },
     {
       icon: Users,
@@ -34,7 +34,7 @@ export default function StatsSection() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-800">
+    <section className="py-16 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

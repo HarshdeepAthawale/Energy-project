@@ -17,9 +17,9 @@ export default function Leaderboard({ entries, currentUserId }: LeaderboardProps
 
   const getRankBg = (rank: number) => {
     if (rank === 1) return 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800'
-    if (rank === 2) return 'bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600'
+    if (rank === 2) return 'bg-gray-50 dark:bg-gray-950 border-gray-200 dark:border-gray-900'
     if (rank === 3) return 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
-    return 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
+    return 'bg-white dark:bg-black border-gray-200 dark:border-gray-950'
   }
 
   return (
@@ -35,7 +35,7 @@ export default function Leaderboard({ entries, currentUserId }: LeaderboardProps
               getRankBg(entry.rank)
             } ${
               entry.userId === currentUserId
-                ? 'ring-2 ring-primary-green'
+                ? 'ring-2 ring-primary-blue'
                 : ''
             }`}
           >
@@ -48,7 +48,7 @@ export default function Leaderboard({ entries, currentUserId }: LeaderboardProps
                   <p className="font-semibold text-gray-900 dark:text-white">
                     {entry.userName}
                     {entry.userId === currentUserId && (
-                      <span className="ml-2 text-xs text-primary-green">(You)</span>
+                      <span className="ml-2 text-xs text-primary-blue">(You)</span>
                     )}
                   </p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -56,7 +56,7 @@ export default function Leaderboard({ entries, currentUserId }: LeaderboardProps
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold text-primary-green">
+                  <p className="text-lg font-bold text-primary-blue">
                     {entry.ecoTokens.toLocaleString()}
                   </p>
                   <p className="text-xs text-gray-600 dark:text-gray-400">tokens</p>

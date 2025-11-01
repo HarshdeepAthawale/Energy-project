@@ -9,7 +9,7 @@ const steps = [
     icon: Recycle,
     title: 'Smart Bins',
     description: 'IoT-enabled bins monitor fill levels and waste types in real-time',
-    color: 'bg-green-100 dark:bg-green-900/20 text-primary-green',
+    color: 'bg-blue-100 dark:bg-blue-900/20 text-primary-blue',
   },
   {
     icon: Route,
@@ -33,7 +33,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-800">
+    <section className="py-16 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

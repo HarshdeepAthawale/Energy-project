@@ -29,7 +29,7 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="py-16 bg-white dark:bg-gray-900">
+    <div className="py-16 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
@@ -77,7 +77,7 @@ export default function AboutPage() {
         <section className="grid md:grid-cols-2 gap-8 mb-16">
           <Card hover>
             <div className="flex items-center mb-4">
-              <Target className="w-10 h-10 text-primary-green mr-3" />
+              <Target className="w-10 h-10 text-black dark:text-white mr-3" />
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Our Mission</h2>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
@@ -89,7 +89,7 @@ export default function AboutPage() {
           </Card>
           <Card hover>
             <div className="flex items-center mb-4">
-              <Eye className="w-10 h-10 text-primary-blue mr-3" />
+              <Eye className="w-10 h-10 text-black dark:text-white mr-3" />
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Our Vision</h2>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
@@ -117,13 +117,13 @@ export default function AboutPage() {
               >
                 <Card hover className="flex items-center space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-primary-green rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-16 h-16 bg-black dark:bg-white rounded-full flex items-center justify-center text-white dark:text-black font-bold">
                       {index + 1}
                     </div>
                   </div>
                   <div className="flex-grow">
                     <div className="flex items-center space-x-4 mb-2">
-                      <span className="text-lg font-semibold text-primary-blue">{item.year}</span>
+                      <span className="text-lg font-semibold text-black dark:text-white">{item.year}</span>
                       <span className="text-xl font-bold text-gray-900 dark:text-white">
                         {item.event}
                       </span>
@@ -144,7 +144,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <Card hover>
               <div className="flex items-center mb-4">
-                <TrendingUp className="w-8 h-8 text-primary-green mr-3" />
+                <TrendingUp className="w-8 h-8 text-black dark:text-white mr-3" />
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   87.5% Segregation Accuracy
                 </h3>
@@ -156,7 +156,7 @@ export default function AboutPage() {
             </Card>
             <Card hover>
               <div className="flex items-center mb-4">
-                <Clock className="w-8 h-8 text-primary-blue mr-3" />
+                <Clock className="w-8 h-8 text-black dark:text-white mr-3" />
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   30% Route Optimization
                 </h3>

@@ -11,13 +11,13 @@ export default function PickupList({ pickups }: PickupListProps) {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed':
-        return 'bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-300'
+        return 'bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300'
       case 'in-progress':
         return 'bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300'
       case 'scheduled':
         return 'bg-yellow-100 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-300'
       default:
-        return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+        return 'bg-gray-100 dark:bg-gray-950 text-gray-700 dark:text-gray-300'
     }
   }
 
@@ -48,7 +48,7 @@ export default function PickupList({ pickups }: PickupListProps) {
           pickups.map((pickup) => (
             <div
               key={pickup.id}
-              className="border border-gray-200 dark:border-gray-700 rounded-xl p-4 hover:shadow-md transition-shadow"
+              className="border border-gray-200 dark:border-gray-950 rounded-xl p-4 hover:shadow-md transition-shadow"
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">
@@ -79,7 +79,7 @@ export default function PickupList({ pickups }: PickupListProps) {
                 {pickup.wasteType.map((type) => (
                   <span
                     key={type}
-                    className="px-2 py-1 rounded-full bg-primary-green/10 text-primary-green text-xs font-medium"
+                    className="px-2 py-1 rounded-full bg-primary-blue/10 text-primary-blue text-xs font-medium"
                   >
                     {type}
                   </span>
@@ -91,7 +91,7 @@ export default function PickupList({ pickups }: PickupListProps) {
                 )}
               </div>
               {pickup.truckId && (
-                <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400">
+                <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-950 text-sm text-gray-600 dark:text-gray-400">
                   Truck: {pickup.truckId}
                 </div>
               )}

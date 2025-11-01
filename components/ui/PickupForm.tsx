@@ -87,7 +87,7 @@ export default function PickupForm({ onSubmit, loading = false }: PickupFormProp
                 address: { ...formData.address, street: e.target.value },
               })
             }
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
             placeholder="123 Main Street"
           />
         </div>
@@ -107,7 +107,7 @@ export default function PickupForm({ onSubmit, loading = false }: PickupFormProp
                   address: { ...formData.address, city: e.target.value },
                 })
               }
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
               placeholder="Mumbai"
             />
           </div>
@@ -125,7 +125,7 @@ export default function PickupForm({ onSubmit, loading = false }: PickupFormProp
                   address: { ...formData.address, zipCode: e.target.value },
                 })
               }
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
               placeholder="400053"
             />
           </div>
@@ -140,13 +140,13 @@ export default function PickupForm({ onSubmit, loading = false }: PickupFormProp
             {wasteTypes.map((type) => (
               <label
                 key={type.value}
-                className="flex items-center space-x-2 p-3 border border-gray-300 dark:border-gray-600 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
+                className="flex items-center space-x-2 p-3 border border-gray-300 dark:border-gray-900 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-950 cursor-pointer"
               >
                 <input
                   type="checkbox"
                   checked={formData.wasteType.includes(type.value)}
                   onChange={() => handleCheckboxChange(type.value)}
-                  className="w-4 h-4 text-primary-green focus:ring-primary-green rounded"
+                  className="w-4 h-4 text-primary-blue focus:ring-primary-blue rounded"
                 />
                 <span className="text-gray-700 dark:text-gray-300">{type.label}</span>
               </label>
@@ -168,7 +168,7 @@ export default function PickupForm({ onSubmit, loading = false }: PickupFormProp
                 setFormData({ ...formData, scheduledDate: e.target.value })
               }
               min={new Date().toISOString().split('T')[0]}
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
             />
           </div>
           <div>
@@ -182,7 +182,7 @@ export default function PickupForm({ onSubmit, loading = false }: PickupFormProp
               onChange={(e) =>
                 setFormData({ ...formData, scheduledTime: e.target.value })
               }
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
             >
               <option value="">Select time</option>
               <option value="9:00 AM">9:00 AM</option>

@@ -20,7 +20,7 @@ const redeemOptions = [
     title: 'Tree Planting',
     description: 'Donate to plant a tree in your name',
     tokens: 300,
-    color: 'bg-green-100 dark:bg-green-900/20 text-primary-green',
+    color: 'bg-blue-100 dark:bg-blue-900/20 text-primary-blue',
   },
   {
     icon: Gift,
@@ -46,7 +46,7 @@ export default function RewardsPage() {
   }
 
   return (
-    <div className="py-16 bg-gray-50 dark:bg-gray-900 min-h-[calc(100vh-4rem)]">
+    <div className="py-16 bg-gray-50 dark:bg-black min-h-[calc(100vh-4rem)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -61,7 +61,7 @@ export default function RewardsPage() {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {/* Eco Tokens Card */}
           <div className="lg:col-span-2">
-            <Card className="bg-gradient-to-br from-yellow-50 to-green-50 dark:from-yellow-900/20 dark:to-green-900/20">
+            <Card className="bg-gradient-to-br from-yellow-50 to-blue-50 dark:from-yellow-900/20 dark:to-blue-900/20">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
@@ -76,14 +76,14 @@ export default function RewardsPage() {
                 </div>
               </div>
               <div className="text-center py-8">
-                <div className="text-6xl font-bold text-primary-green mb-4">
+                <div className="text-6xl font-bold text-primary-blue mb-4">
                   {user.ecoTokens.toLocaleString()}
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                   Available Tokens
                 </p>
               </div>
-              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-950">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -114,19 +114,19 @@ export default function RewardsPage() {
               </h3>
               <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                 <li className="flex items-start space-x-2">
-                  <span className="text-primary-green">✓</span>
+                  <span className="text-primary-blue">✓</span>
                   <span>Proper waste segregation (+20 tokens)</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <span className="text-primary-green">✓</span>
+                  <span className="text-primary-blue">✓</span>
                   <span>Regular pickups (+50 tokens)</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <span className="text-primary-green">✓</span>
+                  <span className="text-primary-blue">✓</span>
                   <span>E-waste disposal (+100 tokens)</span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <span className="text-primary-green">✓</span>
+                  <span className="text-primary-blue">✓</span>
                   <span>Refer friends (+200 tokens)</span>
                 </li>
               </ul>
@@ -152,7 +152,7 @@ export default function RewardsPage() {
                   {option.description}
                 </p>
                 <div className="text-center mb-4">
-                  <span className="text-2xl font-bold text-primary-green">
+                  <span className="text-2xl font-bold text-primary-blue">
                     {option.tokens}
                   </span>
                   <span className="text-gray-600 dark:text-gray-400 ml-1">tokens</span>

@@ -69,7 +69,7 @@ export default function LearnPage() {
   }
 
   return (
-    <div className="py-16 bg-white dark:bg-gray-900">
+    <div className="py-16 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
@@ -110,7 +110,7 @@ export default function LearnPage() {
                   <ul className="space-y-2">
                     {tip.items.map((item) => (
                       <li key={item} className="flex items-start space-x-2">
-                        <CheckCircle className="w-5 h-5 text-primary-green flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700 dark:text-gray-300">{item}</span>
                       </li>
                     ))}
@@ -128,7 +128,7 @@ export default function LearnPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card hover>
-              <AlertCircle className="w-10 h-10 text-primary-green mb-4" />
+              <AlertCircle className="w-10 h-10 text-primary-blue mb-4" />
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                 Rinse Before Disposal
               </h3>
@@ -148,7 +148,7 @@ export default function LearnPage() {
               </p>
             </Card>
             <Card hover>
-              <AlertCircle className="w-10 h-10 text-green-600 mb-4" />
+              <AlertCircle className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                 Reduce and Reuse
               </h3>
@@ -167,9 +167,9 @@ export default function LearnPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+            <Card className="bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20">
               <div className="text-center mb-6">
-                <Leaf className="w-16 h-16 text-primary-green mx-auto mb-4" />
+                <Leaf className="w-16 h-16 text-primary-blue mx-auto mb-4" />
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   Take the Green Pledge
                 </h2>
@@ -180,7 +180,7 @@ export default function LearnPage() {
               </div>
               {pledgeSubmitted ? (
                 <div className="text-center py-8">
-                  <CheckCircle className="w-16 h-16 text-primary-green mx-auto mb-4" />
+                  <CheckCircle className="w-16 h-16 text-primary-blue mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                     Thank you for your commitment!
                   </h3>
@@ -197,7 +197,7 @@ export default function LearnPage() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
                     />
                   </div>
                   <div>
@@ -207,7 +207,7 @@ export default function LearnPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-green focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-900 rounded-xl focus:ring-2 focus:ring-primary-blue focus:border-transparent bg-white dark:bg-gray-950 text-gray-900 dark:text-white"
                     />
                   </div>
                   <div className="text-left">

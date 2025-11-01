@@ -13,7 +13,7 @@ export default function SegregationAccuracyChart({ accuracy }: SegregationAccura
     { name: 'Inaccurate', value: 100 - accuracy },
   ]
 
-  const COLORS = ['#00b894', '#dfe6e9']
+  const COLORS = ['#0984e3', '#dfe6e9']
 
   return (
     <Card>
@@ -21,7 +21,7 @@ export default function SegregationAccuracyChart({ accuracy }: SegregationAccura
         Segregation Accuracy
       </h3>
       <div className="mb-4">
-        <div className="text-4xl font-bold text-primary-green mb-2">
+        <div className="text-4xl font-bold text-primary-blue mb-2">
           {accuracy}%
         </div>
         <div className="text-gray-600 dark:text-gray-400">

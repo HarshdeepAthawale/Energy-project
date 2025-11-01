@@ -15,7 +15,7 @@ const solutions = [
       'Automatic status updates',
       'Multiple waste type compartments',
     ],
-    color: 'bg-green-100 dark:bg-green-900/20 text-primary-green',
+    color: 'bg-blue-100 dark:bg-blue-900/20 text-primary-blue',
   },
   {
     icon: Route,
@@ -57,7 +57,7 @@ const solutions = [
 
 export default function SolutionPage() {
   return (
-    <div className="py-16 bg-white dark:bg-gray-900">
+    <div className="py-16 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
@@ -99,7 +99,7 @@ export default function SolutionPage() {
                     <div className="grid sm:grid-cols-2 gap-3">
                       {solution.features.map((feature) => (
                         <div key={feature} className="flex items-start space-x-2">
-                          <CheckCircle className="w-5 h-5 text-primary-green flex-shrink-0 mt-0.5" />
+                          <CheckCircle className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
                           <span className="text-gray-700 dark:text-gray-300">{feature}</span>
                         </div>
                       ))}
@@ -117,13 +117,13 @@ export default function SolutionPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <Card className="bg-gradient-to-br from-primary-green/10 to-primary-blue/10 dark:from-primary-green/20 dark:to-primary-blue/20">
+          <Card className="bg-gradient-to-br from-primary-blue/10 to-primary-blue/10 dark:from-primary-blue/20 dark:to-primary-blue/20">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
               Combined Impact
             </h2>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-4xl font-bold text-primary-green mb-2">30%</div>
+                <div className="text-4xl font-bold text-primary-blue mb-2">30%</div>
                 <div className="text-gray-700 dark:text-gray-300">Reduction in Collection Time</div>
               </div>
               <div>
@@ -131,7 +131,7 @@ export default function SolutionPage() {
                 <div className="text-gray-700 dark:text-gray-300">Segregation Accuracy</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-green-600 mb-2">6.7K+</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">6.7K+</div>
                 <div className="text-gray-700 dark:text-gray-300">kg CO₂ Saved</div>
               </div>
             </div>
