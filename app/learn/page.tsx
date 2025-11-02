@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
-import { CheckCircle, AlertCircle, Leaf } from 'lucide-react'
+import { CheckCircle, AlertCircle, Leaf, ChevronDown, ChevronUp, TrendingDown, RotateCcw, Recycle, Wrench, Lightbulb, Factory } from 'lucide-react'
 
 const segregationTips = [
   {
@@ -53,10 +53,92 @@ const segregationTips = [
   },
 ]
 
+const sixRs = [
+  {
+    title: 'Reduce',
+    icon: TrendingDown,
+    description: 'Minimize waste generation at the source by consuming less and making conscious purchasing decisions.',
+    examples: [
+      'Buy only what you need',
+      'Choose products with minimal packaging',
+      'Use digital alternatives instead of paper',
+      'Plan meals to reduce food waste',
+      'Avoid single-use items',
+    ],
+    color: 'bg-red-100 dark:bg-red-900/20 text-red-600',
+  },
+  {
+    title: 'Reuse',
+    icon: RotateCcw,
+    description: 'Use items multiple times before disposal. Extend the life of products through creative repurposing.',
+    examples: [
+      'Use refillable water bottles',
+      'Repurpose containers for storage',
+      'Donate clothes and furniture',
+      'Use reusable shopping bags',
+      'Fix items instead of replacing',
+    ],
+    color: 'bg-blue-100 dark:bg-blue-900/20 text-blue-600',
+  },
+  {
+    title: 'Recycle',
+    icon: Recycle,
+    description: 'Process materials into new products. Transform waste into valuable resources through proper sorting.',
+    examples: [
+      'Separate recyclable materials',
+      'Follow local recycling guidelines',
+      'Clean containers before recycling',
+      'Support products made from recycled content',
+      'Participate in recycling programs',
+    ],
+    color: 'bg-green-100 dark:bg-green-900/20 text-green-600',
+  },
+  {
+    title: 'Refurbish',
+    icon: Wrench,
+    description: 'Restore items to working condition through repair and maintenance. Give new life to old products.',
+    examples: [
+      'Repair broken electronics',
+      'Refinish furniture',
+      'Restore vintage items',
+      'Update software instead of buying new',
+      'Replace parts instead of whole items',
+    ],
+    color: 'bg-purple-100 dark:bg-purple-900/20 text-purple-600',
+  },
+  {
+    title: 'Redesign',
+    icon: Lightbulb,
+    description: 'Create products with waste reduction in mind. Innovate designs that minimize environmental impact.',
+    examples: [
+      'Design for durability',
+      'Use modular components',
+      'Create multi-purpose products',
+      'Implement circular design principles',
+      'Consider end-of-life in design',
+    ],
+    color: 'bg-yellow-100 dark:bg-yellow-900/20 text-yellow-600',
+  },
+  {
+    title: 'Remanufacture',
+    icon: Factory,
+    description: 'Rebuild products to original specifications using recycled and refurbished components.',
+    examples: [
+      'Restore products to like-new condition',
+      'Use remanufactured parts',
+      'Support remanufacturing industries',
+      'Extend product lifecycles',
+      'Reduce manufacturing waste',
+    ],
+    color: 'bg-orange-100 dark:bg-orange-900/20 text-orange-600',
+  },
+]
+
 export default function LearnPage() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [pledgeSubmitted, setPledgeSubmitted] = useState(false)
+  const [expandedRs, setExpandedRs] = useState<Record<number, boolean>>({})
 
   const handlePledgeSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -66,6 +148,13 @@ export default function LearnPage() {
       setName('')
       setEmail('')
     }, 5000)
+  }
+
+  const toggleR = (index: number) => {
+    setExpandedRs((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }))
   }
 
   return (
@@ -118,6 +207,84 @@ export default function LearnPage() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+        </section>
+
+        {/* 6 R's Framework */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            The 6 R&apos;s Framework
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-center mb-12">
+            Follow the 6 R&apos;s framework to minimize waste and maximize resource efficiency. Click on each R to learn more.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {sixRs.map((r, index) => {
+              const isExpanded = expandedRs[index] || false
+              const IconComponent = r.icon
+              return (
+                <motion.div
+                  key={r.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="overflow-hidden">
+                    <button
+                      onClick={() => toggleR(index)}
+                      className="w-full text-left"
+                    >
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center space-x-4">
+                          <div className={`${r.color} w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0`}>
+                            <IconComponent className="w-6 h-6" />
+                          </div>
+                          <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                            {r.title}
+                          </h3>
+                        </div>
+                        {isExpanded ? (
+                          <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                        )}
+                      </div>
+                    </button>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pt-4 border-t border-gray-200 dark:border-gray-800">
+                          <p className="text-gray-600 dark:text-gray-300 mb-4">
+                            {r.description}
+                          </p>
+                          <div className="space-y-2">
+                            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                              Examples:
+                            </h4>
+                            <ul className="space-y-2">
+                              {r.examples.map((example, idx) => (
+                                <li key={idx} className="flex items-start space-x-2">
+                                  <CheckCircle className="w-4 h-4 text-primary-blue flex-shrink-0 mt-0.5" />
+                                  <span className="text-sm text-gray-700 dark:text-gray-300">
+                                    {example}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </Card>
+                </motion.div>
+              )
+            })}
           </div>
         </section>
 

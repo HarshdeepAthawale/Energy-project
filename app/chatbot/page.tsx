@@ -46,7 +46,7 @@ export default function ChatbotPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
-      content: 'Hello! I\'m the SmartWaste assistant. I can help you with information about pickups, rewards, waste segregation, and more. How can I assist you today?',
+      content: 'Hello! I\'m the EcoBin assistant. I can help you with information about pickups, rewards, waste segregation, and more. How can I assist you today?',
     },
   ])
   const [input, setInput] = useState('')

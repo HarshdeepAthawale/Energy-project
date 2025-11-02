@@ -1,4 +1,4 @@
-# Smart Waste Management Platform
+# EcoBin - Waste Management Platform
 
 A modern, AI-powered waste management platform built with Next.js, TypeScript, and Tailwind CSS. This platform promotes sustainable waste disposal through IoT integration, AI-based sorting visualization, and community reward systems.
 

@@ -9,7 +9,7 @@ import Footer from '@/components/ui/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Smart Waste Management Platform',
+  title: 'EcoBin - Waste Management Platform',
   description: 'AI-powered waste management system promoting sustainable disposal through IoT integration and community rewards',
 }
 

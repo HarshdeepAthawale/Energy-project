@@ -24,7 +24,7 @@ export default function Hero() {
             <Globe className="w-16 h-16 text-gray-900 dark:text-white" />
           </motion.div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance text-gray-900 dark:text-white">
-            Smart Waste, Clean Future
+            EcoBin - Clean Future
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-700 dark:text-gray-300 max-w-3xl mx-auto text-balance">
             Transforming waste management through IoT integration, AI-powered sorting,

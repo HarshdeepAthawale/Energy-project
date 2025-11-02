@@ -75,7 +75,7 @@ export default function SolutionPage() {
         </motion.div>
 
         {/* Solution Cards */}
-        <div className="space-y-12 mb-16">
+        <div className="space-y-12">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
@@ -110,33 +110,6 @@ export default function SolutionPage() {
             </motion.div>
           ))}
         </div>
-
-        {/* Impact Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <Card className="bg-gradient-to-br from-primary-blue/10 to-primary-blue/10 dark:from-primary-blue/20 dark:to-primary-blue/20">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-              Combined Impact
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-4xl font-bold text-primary-blue mb-2">30%</div>
-                <div className="text-gray-700 dark:text-gray-300">Reduction in Collection Time</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary-blue mb-2">87.5%</div>
-                <div className="text-gray-700 dark:text-gray-300">Segregation Accuracy</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">6.7K+</div>
-                <div className="text-gray-700 dark:text-gray-300">kg CO₂ Saved</div>
-              </div>
-            </div>
-          </Card>
-        </motion.div>
       </div>
     </div>
   )

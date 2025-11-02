@@ -20,7 +20,7 @@ app.use('/api/users', usersRoutes)
 
 // Health check
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', message: 'SmartWaste API is running' })
+  res.json({ status: 'ok', message: 'EcoBin API is running' })
 })
 
 // Start server

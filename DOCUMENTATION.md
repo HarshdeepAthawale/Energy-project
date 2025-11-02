@@ -1,8 +1,8 @@
-# SmartWaste Platform - User Documentation
+# EcoBin Platform - User Documentation
 
 ## Overview
 
-SmartWaste is an AI-powered waste management platform designed to revolutionize waste disposal and recycling in India. The platform combines IoT technology, artificial intelligence, and community engagement to create a sustainable waste management ecosystem.
+EcoBin is an AI-powered waste management platform designed to revolutionize waste disposal and recycling in India. The platform combines IoT technology, artificial intelligence, and community engagement to create a sustainable waste management ecosystem.
 
 ---
 
@@ -11,7 +11,7 @@ SmartWaste is an AI-powered waste management platform designed to revolutionize 
 ### Public Pages (Available Without Login)
 
 #### 1. **Homepage**
-The landing page introduces users to the SmartWaste platform and its mission.
+The landing page introduces users to the EcoBin platform and its mission.
 
 **Features:**
 - **Hero Section**: Main call-to-action with platform introduction
@@ -25,7 +25,7 @@ The landing page introduces users to the SmartWaste platform and its mission.
 - Quick access to key features
 
 #### 2. **About Page**
-Provides comprehensive information about the SmartWaste initiative.
+Provides comprehensive information about the EcoBin initiative.
 
 **Content Includes:**
 - **Problem Statement**: Statistics on India's waste management challenges
@@ -507,5 +507,5 @@ AI-powered assistant for platform support.
 
 ---
 
-This documentation provides a comprehensive guide to using the SmartWaste platform. For technical implementation details, refer to the codebase documentation.
+This documentation provides a comprehensive guide to using the EcoBin platform. For technical implementation details, refer to the codebase documentation.
 

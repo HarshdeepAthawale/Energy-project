@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import { Send, CheckCircle } from 'lucide-react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -41,11 +41,11 @@ export default function ContactPage() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="max-w-2xl mx-auto">
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
             <Card>
@@ -120,111 +120,7 @@ export default function ContactPage() {
               )}
             </Card>
           </motion.div>
-
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="space-y-6"
-          >
-            <Card>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Contact Information
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary-blue/10 p-3 rounded-xl">
-                    <Mail className="w-6 h-6 text-primary-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h3>
-                    <p className="text-gray-600 dark:text-gray-300">support@smartwaste.com</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary-blue/10 p-3 rounded-xl">
-                    <Phone className="w-6 h-6 text-primary-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Phone</h3>
-                    <p className="text-gray-600 dark:text-gray-300">+91 1800-123-4567</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-yellow-100 dark:bg-yellow-900/20 p-3 rounded-xl">
-                    <MapPin className="w-6 h-6 text-yellow-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Address</h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      Mumbai, Maharashtra, India
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
-            {/* Map Placeholder */}
-            <Card className="p-0 overflow-hidden">
-              <div className="h-64 bg-gray-200 dark:bg-gray-950 flex items-center justify-center border dark:border-gray-900">
-                <div className="text-center text-gray-500 dark:text-gray-400">
-                  <MapPin className="w-12 h-12 mx-auto mb-2" />
-                  <p>Google Maps Integration</p>
-                  <p className="text-sm">Add your Google Maps API key to display map</p>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
         </div>
-
-        {/* Testimonials */}
-        <section>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Community Success Stories
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                name: 'Raj Patel',
-                role: 'Resident',
-                quote: 'SmartWaste has made waste management so easy. The reward system keeps me motivated!',
-              },
-              {
-                name: 'Priya Sharma',
-                role: 'Business Owner',
-                quote: 'Our restaurant has significantly improved waste segregation thanks to this platform.',
-              },
-              {
-                name: 'Amit Kumar',
-                role: 'Community Leader',
-                quote: 'The entire neighborhood has become more environmentally conscious since joining.',
-              },
-            ].map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card hover>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 italic">
-                    &quot;{testimonial.quote}&quot;
-                  </p>
-                  <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
-                      {testimonial.role}
-                    </div>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </section>
       </div>
     </div>
   )

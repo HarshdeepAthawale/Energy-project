@@ -30,7 +30,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-2">
             <Recycle className="w-8 h-8 text-black dark:text-white" />
             <span className="text-xl font-bold text-gray-900 dark:text-white">
-              SmartWaste
+              EcoBin
             </span>
           </Link>
 
@@ -53,8 +53,6 @@ export default function Navbar() {
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
-
             {user ? (
               <>
                 <Link
@@ -69,7 +67,7 @@ export default function Navbar() {
                 >
                   Rewards
                 </Link>
-                <div className="hidden md:flex items-center space-x-2">
+                <div className="hidden md:flex items-center space-x-3">
                   <span className="text-sm text-gray-700 dark:text-gray-300">
                     {user.name}
                   </span>
@@ -97,6 +95,8 @@ export default function Navbar() {
                 </Link>
               </>
             )}
+
+            <ThemeToggle />
 
             {/* Mobile menu button */}
             <button

@@ -2,32 +2,9 @@
 
 import { motion } from 'framer-motion'
 import Card from '@/components/ui/Card'
-import { Target, Eye, Clock, TrendingUp } from 'lucide-react'
+import { Target, Eye } from 'lucide-react'
 
 export default function AboutPage() {
-  const timeline = [
-    {
-      year: '2023',
-      event: 'Platform Launch',
-      description: 'Started with pilot program in Mumbai',
-    },
-    {
-      year: '2024 Q1',
-      event: 'IoT Integration',
-      description: 'Deployed 100+ smart bins across the city',
-    },
-    {
-      year: '2024 Q2',
-      event: 'AI Sorting',
-      description: 'Implemented ML-based waste categorization',
-    },
-    {
-      year: '2024 Q3',
-      event: 'Community Expansion',
-      description: 'Reached 1000+ active users',
-    },
-  ]
-
   return (
     <div className="py-16 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +15,7 @@ export default function AboutPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            About SmartWaste
+            About EcoBin
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             We are on a mission to transform waste management in India through
@@ -93,79 +70,12 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Our Vision</h2>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              To become India&apos;s leading smart waste management platform, achieving{' '}
+              To become India&apos;s leading waste management platform, achieving{' '}
               <strong>90%+ waste segregation accuracy</strong> and establishing a circular
               economy model. We envision a future where technology and community collaboration
               eliminate waste management challenges across urban and rural India.
             </p>
           </Card>
-        </section>
-
-        {/* Timeline */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Our Journey
-          </h2>
-          <div className="space-y-6">
-            {timeline.map((item, index) => (
-              <motion.div
-                key={item.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card hover className="flex items-center space-x-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-black dark:bg-white rounded-full flex items-center justify-center text-white dark:text-black font-bold">
-                      {index + 1}
-                    </div>
-                  </div>
-                  <div className="flex-grow">
-                    <div className="flex items-center space-x-4 mb-2">
-                      <span className="text-lg font-semibold text-black dark:text-white">{item.year}</span>
-                      <span className="text-xl font-bold text-gray-900 dark:text-white">
-                        {item.event}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* Key Achievements */}
-        <section>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Key Achievements
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card hover>
-              <div className="flex items-center mb-4">
-                <TrendingUp className="w-8 h-8 text-black dark:text-white mr-3" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  87.5% Segregation Accuracy
-                </h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300">
-                Significantly above industry average through AI-powered sorting and community
-                education.
-              </p>
-            </Card>
-            <Card hover>
-              <div className="flex items-center mb-4">
-                <Clock className="w-8 h-8 text-black dark:text-white mr-3" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  30% Route Optimization
-                </h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300">
-                Reduced collection time and fuel consumption through intelligent routing algorithms.
-              </p>
-            </Card>
-          </div>
         </section>
       </div>
     </div>
